@@ -33,4 +33,6 @@ jobs:
 
       # Now we run our tests
       - name: Test with Jest, Cypress
-        run: npm run start:test
+        uses: cypress-io/github-action@v6
+        with: 
+          start: npm run start:test
