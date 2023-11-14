@@ -7,8 +7,8 @@
         "cypress/globals": true
     },
     "extends": [
-      "eslint:recommended",
-      "plugin:node/recommended"
+        "eslint:recommended",
+        "plugin:node/recommended"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -18,13 +18,13 @@
         "ecmaVersion": 2022
     },
     "plugins": [
-      "cypress",
-      "jest",
-      "node"
+        "cypress",
+        "jest",
+        "node"
     ],
     "rules": {
-      "node/no-unpublished-require": ["error", {
+        "node/no-unpublished-require": ["error", {
         "allowModules": ["cypress"]
-      }]
+        }]
     }
 }
