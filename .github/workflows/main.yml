@@ -31,8 +31,8 @@ jobs:
         with:
           mongodb-version: 5.0
 
-      # Now we run our tests
+      # Now we run our tests with Jest, Cypress
       - name: Test with Jest, Cypress
         uses: cypress-io/github-action@v6
-        with: 
+        with:
           start: npm run start:test
