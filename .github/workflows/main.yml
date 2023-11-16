@@ -44,6 +44,8 @@ jobs:
         run: aws s3 sync . s3://sandra-acebook/sandra-acebook.zip --delete
 
 
+
+
       # Create deployment to CodeDeploy
       - name: AWS Create Deployment
         run: |
@@ -52,4 +54,4 @@ jobs:
           --deployment-config-name CodeDeployDefault.AllAtOnce \
           --deployment-group-name sandra-deployment-group \
           --file-exists-behavior OVERWRITE \
-          --s3-location bucket= sandra-acebook,key=sandra-acebook.zip,bundleType=zip \
+          --s3-location bucket=sandra-acebook,key=sandra-acebook.zip,bundleType=zip \
