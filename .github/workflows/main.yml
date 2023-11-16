@@ -43,8 +43,8 @@ jobs:
       - name: AWS Create Deployment
         run: |
           aws deploy create-deployment \
-          --application-name ${{ matrix.appname }} \
-          --deployment-config-name CodeDeployDefault.OneAtATime \
-          --deployment-group-name ${{ matrix.deploy-group }} \
+          --application-name sandra-acebook\
+          --deployment-config-name CodeDeployDefault.AllAtOnce \
+          --deployment-group-name sandra-deployment-group \
           --file-exists-behavior OVERWRITE \
-          --s3-location bucket=${{ matrix.s3-bucket }},key=${{ matrix.s3-filename }}.zip,bundleType=zip \
+          --s3-location bucket= sandra-acebook,key=sandra-acebook.zip,bundleType=zip \
