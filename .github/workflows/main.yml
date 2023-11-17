@@ -42,7 +42,7 @@ jobs:
       - name: AWS Create Deployment
         run: |
           aws deploy create-deployment \
-          --application-name sandra-acebook \
-          --deployment-group-name sandra-deployment-group \
+          --application-name sandra-acebook-2 \
+          --deployment-group-name sandra-acebook-2-deployment \
           --file-exists-behavior OVERWRITE \
           --s3-location bucket=sandra-acebook,key=sandra-acebook.zip,bundleType=zip \
