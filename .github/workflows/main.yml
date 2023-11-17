@@ -26,11 +26,6 @@ jobs:
       # This step installs pip, pipenv, and our dependencies
       - name: Install dependencies
         run: npm install
-
-      # Zip the application files
-      - name: Zip application
-        run: zip -r sandra-acebook.zip .
-
       
       #deploy
       - name: Configure AWS Credentials
